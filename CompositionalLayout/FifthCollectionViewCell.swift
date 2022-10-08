@@ -1,5 +1,5 @@
 //
-//  SecondCollectionViewCell.swift
+//  FifthCollectionViewCell.swift
 //  CompositionalLayout
 //
 //  Created by Abdurrahman Gazi Yavuz on 8.10.2022.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class SecondCollectionViewCell: UICollectionViewCell {
+class FifthCollectionViewCell: UICollectionViewCell {
     
-    static let identifier   = "SecondCollectionViewCell"
+    static let identifier   = "FifthCollectionViewCell"
     
     private let text: UILabel   = {
         
@@ -17,7 +17,7 @@ class SecondCollectionViewCell: UICollectionViewCell {
         
         text.translatesAutoresizingMaskIntoConstraints = false
         
-        text.text   = "SecondCollectionViewCell"
+        text.text   = "FifthCollectionViewCell"
         
         return text
         
@@ -37,9 +37,11 @@ class SecondCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        
         contentView.addSubview(text)
-        contentView.backgroundColor     = .systemBlue
+        contentView.backgroundColor     = .systemCyan
         applyConstraints()
+        
     }
     
     override func layoutSubviews() {
