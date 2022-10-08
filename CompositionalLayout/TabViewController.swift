@@ -17,6 +17,7 @@ class TabViewController: UITabBarController {
         
         let firstVC     = UINavigationController(rootViewController: FirstViewController())
         let secondVC    = UINavigationController(rootViewController: SecondViewController())
+        let thirdVC     = UINavigationController(rootViewController: ThirdViewController())
         
         firstVC.title               = "First"
         firstVC.tabBarItem.image    = UIImage(systemName: "1.circle.fill")
@@ -24,8 +25,11 @@ class TabViewController: UITabBarController {
         secondVC.title              = "Second"
         secondVC.tabBarItem.image   = UIImage(systemName: "2.circle.fill")
         
+        thirdVC.title               = "Third"
+        thirdVC.tabBarItem.image    = UIImage(systemName: "3.circle.fill")
+        
         tabBar.tintColor            = .label
-        setViewControllers([firstVC, secondVC], animated: true)
+        setViewControllers([firstVC, secondVC, thirdVC], animated: true)
     }
     
 

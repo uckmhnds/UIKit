@@ -10,12 +10,15 @@
 		9877A00428F1975000BA9BB2 /* CompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877A00328F1975000BA9BB2 /* CompositionalLayout.swift */; };
 		9877A00628F1988B00BA9BB2 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877A00528F1988B00BA9BB2 /* TabViewController.swift */; };
 		9877A00828F198F400BA9BB2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877A00728F198F400BA9BB2 /* SecondViewController.swift */; };
+		9877A00C28F1CEB100BA9BB2 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877A00B28F1CEB100BA9BB2 /* ThirdViewController.swift */; };
+		9877A00E28F1CF6B00BA9BB2 /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877A00D28F1CF6B00BA9BB2 /* SecondCollectionViewCell.swift */; };
+		9877A01028F1CF8900BA9BB2 /* ThirdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9877A00F28F1CF8900BA9BB2 /* ThirdCollectionViewCell.swift */; };
 		98D9C65628F18B7200094444 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C65528F18B7200094444 /* AppDelegate.swift */; };
 		98D9C65828F18B7200094444 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C65728F18B7200094444 /* SceneDelegate.swift */; };
 		98D9C65A28F18B7200094444 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C65928F18B7200094444 /* FirstViewController.swift */; };
 		98D9C65F28F18B7300094444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C65E28F18B7300094444 /* Assets.xcassets */; };
 		98D9C66228F18B7300094444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D9C66028F18B7300094444 /* LaunchScreen.storyboard */; };
-		98D9C68628F18C0300094444 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C68528F18C0300094444 /* CollectionViewCell.swift */; };
+		98D9C68628F18C0300094444 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D9C68528F18C0300094444 /* FirstCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		9877A00328F1975000BA9BB2 /* CompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayout.swift; sourceTree = "<group>"; };
 		9877A00528F1988B00BA9BB2 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		9877A00728F198F400BA9BB2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9877A00B28F1CEB100BA9BB2 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		9877A00D28F1CF6B00BA9BB2 /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
+		9877A00F28F1CF8900BA9BB2 /* ThirdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCollectionViewCell.swift; sourceTree = "<group>"; };
 		98D9C65228F18B7200094444 /* CompositionalLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D9C65528F18B7200094444 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D9C65728F18B7200094444 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +54,7 @@
 		98D9C66328F18B7300094444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98D9C66828F18B7300094444 /* CompositionalLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompositionalLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D9C67228F18B7300094444 /* CompositionalLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompositionalLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		98D9C68528F18C0300094444 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		98D9C68528F18C0300094444 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +108,10 @@
 				9877A00528F1988B00BA9BB2 /* TabViewController.swift */,
 				98D9C65928F18B7200094444 /* FirstViewController.swift */,
 				9877A00728F198F400BA9BB2 /* SecondViewController.swift */,
-				98D9C68528F18C0300094444 /* CollectionViewCell.swift */,
+				9877A00B28F1CEB100BA9BB2 /* ThirdViewController.swift */,
+				98D9C68528F18C0300094444 /* FirstCollectionViewCell.swift */,
+				9877A00D28F1CF6B00BA9BB2 /* SecondCollectionViewCell.swift */,
+				9877A00F28F1CF8900BA9BB2 /* ThirdCollectionViewCell.swift */,
 				9877A00328F1975000BA9BB2 /* CompositionalLayout.swift */,
 				98D9C65E28F18B7300094444 /* Assets.xcassets */,
 				98D9C66028F18B7300094444 /* LaunchScreen.storyboard */,
@@ -243,10 +252,13 @@
 			files = (
 				98D9C65A28F18B7200094444 /* FirstViewController.swift in Sources */,
 				98D9C65628F18B7200094444 /* AppDelegate.swift in Sources */,
-				98D9C68628F18C0300094444 /* CollectionViewCell.swift in Sources */,
+				9877A01028F1CF8900BA9BB2 /* ThirdCollectionViewCell.swift in Sources */,
+				98D9C68628F18C0300094444 /* FirstCollectionViewCell.swift in Sources */,
 				98D9C65828F18B7200094444 /* SceneDelegate.swift in Sources */,
 				9877A00828F198F400BA9BB2 /* SecondViewController.swift in Sources */,
+				9877A00E28F1CF6B00BA9BB2 /* SecondCollectionViewCell.swift in Sources */,
 				9877A00628F1988B00BA9BB2 /* TabViewController.swift in Sources */,
+				9877A00C28F1CEB100BA9BB2 /* ThirdViewController.swift in Sources */,
 				9877A00428F1975000BA9BB2 /* CompositionalLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

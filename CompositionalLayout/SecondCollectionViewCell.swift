@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell.swift
+//  SecondCollectionViewCell.swift
 //  CompositionalLayout
 //
 //  Created by Abdurrahman Gazi Yavuz on 8.10.2022.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class SecondCollectionViewCell: UICollectionViewCell {
     
-    static let identifier   = "CollectionViewCell"
+    static let identifier   = "SecondCollectionViewCell"
     
     required init?(coder: NSCoder) {
         fatalError()
@@ -18,7 +18,7 @@ class CollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        contentView.backgroundColor     = .systemRed
+        contentView.backgroundColor     = .systemBlue
         
     }
     

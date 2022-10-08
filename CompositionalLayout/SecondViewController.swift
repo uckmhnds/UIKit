@@ -17,7 +17,7 @@ class SecondViewController: UIViewController {
         
         let view        = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
-        view.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.identifier)
+        view.register(FirstCollectionViewCell.self, forCellWithReuseIdentifier: FirstCollectionViewCell.identifier)
         
         return view
     }
@@ -80,7 +80,7 @@ extension SecondViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell else {return UICollectionViewCell()}
+        guard let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: FirstCollectionViewCell.identifier, for: indexPath) as? FirstCollectionViewCell else {return UICollectionViewCell()}
         
         return cell
         
