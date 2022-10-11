@@ -10,12 +10,8 @@
 		98BB39E628F56A7A00E022D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB39E528F56A7A00E022D2 /* AppDelegate.swift */; };
 		98BB39E828F56A7A00E022D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB39E728F56A7A00E022D2 /* SceneDelegate.swift */; };
 		98BB39EA28F56A7A00E022D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB39E928F56A7A00E022D2 /* ViewController.swift */; };
-		98BB39ED28F56A7A00E022D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98BB39EB28F56A7A00E022D2 /* Main.storyboard */; };
 		98BB39EF28F56A7B00E022D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BB39EE28F56A7B00E022D2 /* Assets.xcassets */; };
 		98BB39F228F56A7B00E022D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98BB39F028F56A7B00E022D2 /* LaunchScreen.storyboard */; };
-		98BB39FD28F56A7B00E022D2 /* SwipeableViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB39FC28F56A7B00E022D2 /* SwipeableViewsTests.swift */; };
-		98BB3A0728F56A7B00E022D2 /* SwipeableViewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB3A0628F56A7B00E022D2 /* SwipeableViewsUITests.swift */; };
-		98BB3A0928F56A7B00E022D2 /* SwipeableViewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB3A0828F56A7B00E022D2 /* SwipeableViewsUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,15 +36,11 @@
 		98BB39E528F56A7A00E022D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98BB39E728F56A7A00E022D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		98BB39E928F56A7A00E022D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		98BB39EC28F56A7A00E022D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98BB39EE28F56A7B00E022D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98BB39F128F56A7B00E022D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98BB39F328F56A7B00E022D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98BB39F828F56A7B00E022D2 /* SwipeableViewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeableViewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		98BB39FC28F56A7B00E022D2 /* SwipeableViewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewsTests.swift; sourceTree = "<group>"; };
 		98BB3A0228F56A7B00E022D2 /* SwipeableViewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeableViewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		98BB3A0628F56A7B00E022D2 /* SwipeableViewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewsUITests.swift; sourceTree = "<group>"; };
-		98BB3A0828F56A7B00E022D2 /* SwipeableViewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				98BB39E428F56A7A00E022D2 /* SwipeableViews */,
-				98BB39FB28F56A7B00E022D2 /* SwipeableViewsTests */,
-				98BB3A0528F56A7B00E022D2 /* SwipeableViewsUITests */,
 				98BB39E328F56A7A00E022D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,29 +92,11 @@
 				98BB39E528F56A7A00E022D2 /* AppDelegate.swift */,
 				98BB39E728F56A7A00E022D2 /* SceneDelegate.swift */,
 				98BB39E928F56A7A00E022D2 /* ViewController.swift */,
-				98BB39EB28F56A7A00E022D2 /* Main.storyboard */,
 				98BB39EE28F56A7B00E022D2 /* Assets.xcassets */,
 				98BB39F028F56A7B00E022D2 /* LaunchScreen.storyboard */,
 				98BB39F328F56A7B00E022D2 /* Info.plist */,
 			);
 			path = SwipeableViews;
-			sourceTree = "<group>";
-		};
-		98BB39FB28F56A7B00E022D2 /* SwipeableViewsTests */ = {
-			isa = PBXGroup;
-			children = (
-				98BB39FC28F56A7B00E022D2 /* SwipeableViewsTests.swift */,
-			);
-			path = SwipeableViewsTests;
-			sourceTree = "<group>";
-		};
-		98BB3A0528F56A7B00E022D2 /* SwipeableViewsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				98BB3A0628F56A7B00E022D2 /* SwipeableViewsUITests.swift */,
-				98BB3A0828F56A7B00E022D2 /* SwipeableViewsUITestsLaunchTests.swift */,
-			);
-			path = SwipeableViewsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +205,6 @@
 			files = (
 				98BB39F228F56A7B00E022D2 /* LaunchScreen.storyboard in Resources */,
 				98BB39EF28F56A7B00E022D2 /* Assets.xcassets in Resources */,
-				98BB39ED28F56A7A00E022D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +239,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98BB39FD28F56A7B00E022D2 /* SwipeableViewsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98BB3A0928F56A7B00E022D2 /* SwipeableViewsUITestsLaunchTests.swift in Sources */,
-				98BB3A0728F56A7B00E022D2 /* SwipeableViewsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +265,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		98BB39EB28F56A7A00E022D2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				98BB39EC28F56A7A00E022D2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		98BB39F028F56A7B00E022D2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,7 +401,6 @@
 				INFOPLIST_FILE = SwipeableViews/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +427,6 @@
 				INFOPLIST_FILE = SwipeableViews/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
