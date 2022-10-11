@@ -16,4 +16,4 @@ This compositional layout has a view controller displaying  UICollectionView reg
 <img src="https://github.com/uckmhnds/markDown/blob/main/ss5.png" width=25% height=25%> 
 
 
-![](./Assets/gif1.gif)
+![](/Assets/gif1.gif)
