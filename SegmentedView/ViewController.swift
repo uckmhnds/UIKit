@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     private let thirdSegment    = ["thirdSegmentRow1", "thirdSegmentRow2", "thirdSegmentRow3"]
     
-    private lazy var rowsToDisplay  = firstSegment
+    private lazy var masterArray  = firstSegment
     
     private lazy var segmentedControl: UISegmentedControl = {
         
@@ -49,11 +49,11 @@ class ViewController: UIViewController {
     @objc fileprivate func handleSegmentChange(){
         switch segmentedControl.selectedSegmentIndex{
         case 0:
-            rowsToDisplay   = firstSegment
+            masterArray   = firstSegment
         case 1:
-            rowsToDisplay   = secondSegment
+            masterArray   = secondSegment
         default:
-            rowsToDisplay   = thirdSegment
+            masterArray   = thirdSegment
         }
         
         tableView.reloadData()
@@ -95,13 +95,17 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rowsToDisplay.count
+        return masterArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell    = UITableViewCell()
-        cell.textLabel?.text    = rowsToDisplay[indexPath.row]
+        cell.textLabel?.text    = masterArray[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
