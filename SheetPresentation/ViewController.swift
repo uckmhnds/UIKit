@@ -43,6 +43,10 @@ class ViewController: UIViewController {
         
         let action  = UIAction(){ _ in
             self.tableViewController.delegate   = self
+            
+            /// Set this to present always. Keeps prevent closing
+//            self.tableViewController.isModalInPresentation = true
+            
             if let sheet = self.tableViewController.sheetPresentationController{
                 
                 let customDetent = UISheetPresentationController.Detent.custom { _ in
@@ -52,7 +56,11 @@ class ViewController: UIViewController {
                 sheet.detents = [customDetent, .medium(), .large()]
                 sheet.prefersGrabberVisible = true
                 sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                sheet.largestUndimmedDetentIdentifier = .medium
             }
+            
+//            self.view.backgroundColor = .clear
+            self.modalPresentationStyle = .pageSheet
             
             self.present(self.tableViewController, animated: true)
             
