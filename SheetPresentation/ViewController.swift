@@ -44,7 +44,12 @@ class ViewController: UIViewController {
         let action  = UIAction(){ _ in
             self.tableViewController.delegate   = self
             if let sheet = self.tableViewController.sheetPresentationController{
-                sheet.detents = [.medium(), .large()]
+                
+                let customDetent = UISheetPresentationController.Detent.custom { _ in
+                    return 50
+                }
+                
+                sheet.detents = [customDetent, .medium(), .large()]
                 sheet.prefersGrabberVisible = true
                 sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             }
