@@ -7,3 +7,4 @@ This repo contains layouts to be used in the future projects
 - [Segmented View](https://github.com/uckmhnds/Layouts/tree/SegmentedView)
 - [Sheet Presentation](https://github.com/uckmhnds/Layouts/tree/SheetPresentation)
 - [Standard Table View](https://github.com/uckmhnds/Layouts/tree/StandardTableView)
+- [UIControl](https://github.com/uckmhnds/Layouts/tree/UIControl)
