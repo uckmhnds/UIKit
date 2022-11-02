@@ -12,7 +12,7 @@
 		98BB3A6428F7459700E022D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB3A6328F7459700E022D2 /* ViewController.swift */; };
 		98BB3A6928F7459800E022D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BB3A6828F7459800E022D2 /* Assets.xcassets */; };
 		98BB3A6C28F7459800E022D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98BB3A6A28F7459800E022D2 /* LaunchScreen.storyboard */; };
-		98BB3A9028F7480F00E022D2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB3A8F28F7480F00E022D2 /* TableViewController.swift */; };
+		98BB3A9028F7480F00E022D2 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB3A8F28F7480F00E022D2 /* SheetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,7 @@
 		98BB3A6D28F7459800E022D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98BB3A7228F7459800E022D2 /* SheetPresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SheetPresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BB3A7C28F7459800E022D2 /* SheetPresentationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SheetPresentationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		98BB3A8F28F7480F00E022D2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		98BB3A8F28F7480F00E022D2 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 				98BB3A5F28F7459700E022D2 /* AppDelegate.swift */,
 				98BB3A6128F7459700E022D2 /* SceneDelegate.swift */,
 				98BB3A6328F7459700E022D2 /* ViewController.swift */,
-				98BB3A8F28F7480F00E022D2 /* TableViewController.swift */,
+				98BB3A8F28F7480F00E022D2 /* SheetViewController.swift */,
 				98BB3A6828F7459800E022D2 /* Assets.xcassets */,
 				98BB3A6A28F7459800E022D2 /* LaunchScreen.storyboard */,
 				98BB3A6D28F7459800E022D2 /* Info.plist */,
@@ -235,7 +235,7 @@
 				98BB3A6428F7459700E022D2 /* ViewController.swift in Sources */,
 				98BB3A6028F7459700E022D2 /* AppDelegate.swift in Sources */,
 				98BB3A6228F7459700E022D2 /* SceneDelegate.swift in Sources */,
-				98BB3A9028F7480F00E022D2 /* TableViewController.swift in Sources */,
+				98BB3A9028F7480F00E022D2 /* SheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
