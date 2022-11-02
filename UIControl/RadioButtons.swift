@@ -89,6 +89,8 @@ class RadioButtons: UIStackView {
     private lazy var stateTextLabel: UILabel = {
         let label = UILabel()
         label.text = "subbutton1"
+        label.textColor = .systemRed
+        label.font = .systemFont(ofSize: 32, weight: .bold)
         return label
     }()
     

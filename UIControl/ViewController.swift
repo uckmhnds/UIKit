@@ -45,6 +45,8 @@ class ViewController: UIViewController {
         
         view.addSubview(stackView)
         
+        view.backgroundColor = .systemBackground
+        
         applyConstraints()
         
         
