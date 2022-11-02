@@ -7,27 +7,70 @@
 
 import UIKit
 
-protocol TableViewControllerDelegate {
-    func tableViewControllerDidSelect(item: String)
+protocol SheetViewControllerDelegate {
+    func sheetViewControllerDidSelect(item: String)
 }
 
-class TableViewController: UITableViewController {
+class SheetViewController: UIViewController {
     
     private let items = Range(0...20).map { "\($0)" }
     
-    var delegate: TableViewControllerDelegate?
+    var delegate: SheetViewControllerDelegate?
+    
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        view.backgroundColor = .systemBackground
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    @objc private func onTap(sender: UITapGestureRecognizer) {
+
+        self.view.window?.removeGestureRecognizer(sender)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    private lazy var tapRecognizer: UITapGestureRecognizer = {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onTap(sender:)))
+        tap.numberOfTapsRequired = 1
+        tap.numberOfTouchesRequired = 1
+        tap.cancelsTouchesInView = false
+        return tap
+    }()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        tapRecognizer.delegate = self
+        self.view.window?.addGestureRecognizer(tapRecognizer)
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        tableView.frame = view.bounds
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+}
+
+extension SheetViewController: UITableViewDelegate, UITableViewDataSource {
+    
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return items.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell        = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
         
@@ -41,16 +84,33 @@ class TableViewController: UITableViewController {
         
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
         
         let item    = items[indexPath.row]
         
         if let delegate = delegate {
-            delegate.tableViewControllerDidSelect(item: item)
+            delegate.sheetViewControllerDidSelect(item: item)
         }
     }
+}
 
 
+extension SheetViewController: UIGestureRecognizerDelegate {
+
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        true
+    }
+
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        let location = touch.location(in: self.view)
+
+        if self.view.point(inside: location, with: nil) {
+            return false
+        }
+        else {
+            return true
+        }
+    }
 }
