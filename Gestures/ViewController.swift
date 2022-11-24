@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+#warning("Implement GestureRecognizer staff")
+#warning("Create a README.md")
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     //
@@ -297,7 +298,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             break
         case .ended:
             print("longPressGesture ended")
-            setDefaultLabels()
+//            setDefaultLabels()
             break
         case .cancelled:
             print("longPressGesture cancelled")
@@ -405,7 +406,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(doubleTapGestureAction(_:)))
         gesture.numberOfTapsRequired = 2
-        gesture.name = "UITapGestureRecognizer"
+        gesture.name = "UIDoubleTapGestureRecognizer"
         return gesture
         
     }()
@@ -590,19 +591,19 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         return false
     }
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        
-        // If either gesture recognizer is a long press, do not allow
-        // simultaneous recognition.
-        
-        if gestureRecognizer is UILongPressGestureRecognizer ||
-            otherGestureRecognizer is UILongPressGestureRecognizer {
-            
-            return false
-            
-        }
-        
-        return true
-    }
+//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+//
+//        // If either gesture recognizer is a long press, do not allow
+//        // simultaneous recognition.
+//
+//        if gestureRecognizer is UILongPressGestureRecognizer ||
+//            otherGestureRecognizer is UILongPressGestureRecognizer {
+//
+//            return false
+//
+//        }
+//
+//        return true
+//    }
 
 }
