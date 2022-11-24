@@ -3,16 +3,84 @@ This repo contains UIKit elements and layouts to be used in the future projects
 
 ## Branches
 - [Compositional Layout](https://github.com/uckmhnds/Layouts/tree/CompositionalLayout)
+    - UIViewController
+    - UICollectionView
+    - UICollectionViewCompositionalLayout
+    - UICollectionViewDataSource
+    - UICollectionViewDelegate
+    - UICollectionReusableView
+    - NSCollectionLayoutSize
+    - NSCollectionLayoutItem
+    - NSCollectionLayoutDimension
+    - NSCollectionLayoutSection
+    - NSCollectionLayoutBoundarySupplementaryItem
+
+
 - [Swipeable Views](https://github.com/uckmhnds/Layouts/tree/SwipeableViews)
+    - UIViewController
+    - UIButton
+    - UIPageControl
+    - UIStackView
+    - UICollectionView
+    - UICollectionViewCell
+    - UICollectionViewFlowLayout
+    - UICollectionViewDelegate
+    - UICollectionViewDataSource
+    - UICollectionViewDelegateFlowLayout
+
+
 - [Segmented View](https://github.com/uckmhnds/Layouts/tree/SegmentedView)
+    - UIViewController
+    - UISegmentedControl
+    - UIStackView
+    - UITableView
+    - UITableViewCell
+    - UITableViewDelegate
+    - UITableViewDataSource
+
+
 - [Sheet Presentation](https://github.com/uckmhnds/Layouts/tree/SheetPresentation)
+    - UIViewController
+    - UIAction
+    - UISheetPresentationController
+    - UISheetPresentationController.Detent
+    - UIButton
+    - UIStackView
+    - UITableView
+    - UITableViewDelegate
+    - UITableViewDataSource
+    - UITapGestureRecognizer
+    - UIGestureRecognizerDelegate
+
+
 - [Standard Table View](https://github.com/uckmhnds/Layouts/tree/StandardTableView)
+    - UIViewController
+    - UIRefreshControl
+    - UITableView
+    - UITableViewCell
+    - UITableViewCell.EditingStyle
+    - UITableViewDataSource
+    - UITableViewDelegate
+    - UITableViewDragDelegate
+    - UITableViewDropDelegate
+    - UITableViewDropCoordinator
+    - UIDragItem
+    - UIDragSession
+    - UIDropSession
+    - UISwipeActionsConfiguration
+    - UIContextualAction
+    - UIContextMenuConfiguration
+    - UIButton
+    - UIAction
+
+
 - [UIControl](https://github.com/uckmhnds/Layouts/tree/UIControl)
     - UIViewController
     - UILongPressGestureRecognizer
     - UIStackView
     - UIButton
     - UIButton.configurationUpdateHandler
+    - UIAction
     - UIDatePicker
     - UISwitch
     - UIStepper
@@ -31,6 +99,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - UIDatePicker
     - UIView
     - UIMenu
+    - UIAction
     - UIButton
     - UIImage
     - UIImageView
