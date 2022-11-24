@@ -37,7 +37,7 @@ class CollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegate {
     private lazy var longPressGesture: UILongPressGestureRecognizer = {
         let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressCell(_:)))
         recognizer.delegate = self
-        recognizer.minimumPressDuration = 1.5
+        recognizer.minimumPressDuration = 1.0
         recognizer.numberOfTouchesRequired = 1
         recognizer.allowableMovement = 10
         return recognizer

@@ -45,7 +45,7 @@ class CollectionModalView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         let swipeDownGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeDown(_:)))
         swipeDownGesture.direction = [.down, .left, .right, .up]
-//        swipeDownGesture.numberOfTouchesRequired = 1
+        swipeDownGesture.numberOfTouchesRequired = 1
         view.addGestureRecognizer(swipeDownGesture)
         return view
         
