@@ -9,3 +9,4 @@ This repo contains UIKit elements and layouts to be used in the future projects
 - [Standard Table View](https://github.com/uckmhnds/Layouts/tree/StandardTableView)
 - [UIControl](https://github.com/uckmhnds/Layouts/tree/UIControl)
 - [ModalPresentation](https://github.com/uckmhnds/Layouts/tree/ModalPresentation)
+- [Gestures](https://github.com/uckmhnds/Layouts/tree/Gestures)
