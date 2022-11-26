@@ -3,8 +3,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
 
 ## Branches
 - [Compositional Layout](https://github.com/uckmhnds/Layouts/tree/CompositionalLayout)
-<font size=12>
-    - UIViewController
+    - <font size=12>UIViewController</font>
     - UICollectionView
     - UICollectionViewCompositionalLayout
     - UICollectionViewDataSource
@@ -15,7 +14,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - NSCollectionLayoutDimension
     - NSCollectionLayoutSection
     - NSCollectionLayoutBoundarySupplementaryItem
-</font>
+
 - [Swipeable Views](https://github.com/uckmhnds/Layouts/tree/SwipeableViews)
     - UIViewController
     - UIButton
