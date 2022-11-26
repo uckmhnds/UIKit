@@ -3,17 +3,17 @@ This repo contains UIKit elements and layouts to be used in the future projects
 
 ## Branches
 - [Compositional Layout](https://github.com/uckmhnds/Layouts/tree/CompositionalLayout)
-    - ####### UIViewController
-    - UICollectionView
-    - UICollectionViewCompositionalLayout
-    - UICollectionViewDataSource
-    - UICollectionViewDelegate
-    - UICollectionReusableView
-    - NSCollectionLayoutSize
-    - NSCollectionLayoutItem
-    - NSCollectionLayoutDimension
-    - NSCollectionLayoutSection
-    - NSCollectionLayoutBoundarySupplementaryItem
+    - ###### UIViewController
+    - ###### UICollectionView
+    - ###### UICollectionViewCompositionalLayout
+    - ###### UICollectionViewDataSource
+    - ###### UICollectionViewDelegate
+    - ###### UICollectionReusableView
+    - ###### NSCollectionLayoutSize
+    - ###### NSCollectionLayoutItem
+    - ###### NSCollectionLayoutDimension
+    - ###### NSCollectionLayoutSection
+    - ###### NSCollectionLayoutBoundarySupplementaryItem
 
 - [Swipeable Views](https://github.com/uckmhnds/Layouts/tree/SwipeableViews)
     - UIViewController
