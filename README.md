@@ -1,6 +1,16 @@
 # README
 This repo contains UIKit elements and layouts to be used in the future projects
 
+- Compositional Layout
+- Swipeable Views
+- Segmented View
+- Sheet Presentation
+- Standard Table View
+- UIControl
+- ModalPresentation
+- Gestures
+- Drawer Menu
+
 ## Branches
 - [Compositional Layout](https://github.com/uckmhnds/Layouts/tree/CompositionalLayout)
     - <sub>UIViewController</sub>
