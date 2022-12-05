@@ -70,21 +70,23 @@ extension RootViewController: HomeViewControllerDelegate {
     
     func side() {
         let vc = SideViewController()
+        vc.delegate = self
         addChild(vc)
         view.addSubview(vc.view)
-        let sideMenuWidth: CGFloat = 120
-        vc.view.translatesAutoresizingMaskIntoConstraints = false
-        vc.view.widthAnchor.constraint(equalToConstant: sideMenuWidth).isActive = true
-        let sideMenuTrailingConstraint = vc.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -sideMenuWidth)
-        sideMenuTrailingConstraint.isActive = true
-        vc.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        vc.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//        let sideMenuWidth: CGFloat = 120
+//        vc.view.translatesAutoresizingMaskIntoConstraints = false
+//        vc.view.widthAnchor.constraint(equalToConstant: sideMenuWidth).isActive = true
+//        let sideMenuTrailingConstraint = vc.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -sideMenuWidth)
+//        sideMenuTrailingConstraint.isActive = true
+//        vc.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//        vc.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         vc.didMove(toParent: self)
         
         UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseIn) {
             
-            sideMenuTrailingConstraint.constant = 0
-            self.view.layoutIfNeeded()
+//            sideMenuTrailingConstraint.constant = 0
+            vc.pushSideMenu()
+//            self.view.layoutIfNeeded()
             
         } completion: { done in
             if done {
@@ -93,6 +95,17 @@ extension RootViewController: HomeViewControllerDelegate {
         }
     }
     
+}
+
+extension RootViewController: SideViewControllerDelegate {
+    func popSideMenu() {
+        
+        let child = children.last!
+        child.willMove(toParent: nil)
+        child.view.removeFromSuperview()
+        child.removeFromParent()
+        
+    }
 }
 
 /*
