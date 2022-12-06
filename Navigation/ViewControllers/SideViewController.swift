@@ -15,8 +15,8 @@ class SideViewController: UIViewController {
     
     weak var delegate: SideViewControllerDelegate?
     
-    private let sideMenuWidth: CGFloat = 120
-    private var sideMenuLeadingConstraint: NSLayoutConstraint!
+    private let sideMenuWidth: CGFloat = 180
+    var sideMenuLeadingConstraint: NSLayoutConstraint!
     
     private lazy var sideMenu: UIView = {
         let view = UIView()
@@ -25,7 +25,7 @@ class SideViewController: UIViewController {
         return view
     }()
     
-    private lazy var shadowView: UIView = {
+    lazy var shadowView: UIView = {
         let view = UIView()
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.backgroundColor = .black
@@ -41,7 +41,7 @@ class SideViewController: UIViewController {
         sideMenuLeadingConstraint.constant = 0
         shadowView.alpha = 0.6
     }
-    
+    #warning("animate popSideMenu")
     @objc private func popSideMenu(){
         
         sideMenuLeadingConstraint.constant = -sideMenuWidth
