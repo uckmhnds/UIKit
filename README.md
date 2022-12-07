@@ -1,19 +1,19 @@
 # README
 This repo contains UIKit elements and layouts to be used in the future projects
 
-- Compositional Layout
-- Swipeable Views
-- Segmented View
-- Sheet Presentation
-- Standard Table View
-- UIControl
-- ModalPresentation
-- Gestures
-- Drawer Menu
-- Navigation
+- [Compositional Layout](https://github.com/uckmhnds/Layouts/tree/CompositionalLayout)
+- [Swipeable Views](https://github.com/uckmhnds/Layouts/tree/SwipeableViews)
+- [Segmented View](https://github.com/uckmhnds/Layouts/tree/SegmentedView)
+- [Sheet Presentation](https://github.com/uckmhnds/Layouts/tree/SheetPresentation)
+- [Standard Table View](https://github.com/uckmhnds/Layouts/tree/StandardTableView)
+- [UIControl](https://github.com/uckmhnds/Layouts/tree/UIControl)
+- [ModalPresentation](https://github.com/uckmhnds/Layouts/tree/ModalPresentation)
+- [Gestures](https://github.com/uckmhnds/Layouts/tree/Gestures)
+- [Drawer Menu](https://github.com/uckmhnds/Layouts/tree/DrawerMenu)
+- [Navigation](https://github.com/uckmhnds/Layouts/tree/Navigation)
 
 ## Branches
-- [Compositional Layout](https://github.com/uckmhnds/Layouts/tree/CompositionalLayout)
+- Compositional Layout
     - <sub>UIViewController</sub>
     - <sub>UICollectionView</sub>
     - <sub>UICollectionViewCompositionalLayout</sub>
@@ -26,7 +26,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - <sub>NSCollectionLayoutSection</sub>
     - <sub>NSCollectionLayoutBoundarySupplementaryItem</sub>
 
-- [Swipeable Views](https://github.com/uckmhnds/Layouts/tree/SwipeableViews)
+- Swipeable Views
     - <sub>UIViewController</sub>
     - <sub>UIButton</sub>
     - <sub>UIPageControl</sub>
@@ -39,7 +39,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - <sub>UICollectionViewDelegateFlowLayout</sub>
 
 
-- [Segmented View](https://github.com/uckmhnds/Layouts/tree/SegmentedView)
+- Segmented View
     - <sub>UIViewController</sub>
     - <sub>UISegmentedControl</sub>
     - <sub>UIStackView</sub>
@@ -49,7 +49,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - <sub>UITableViewDataSource</sub>
 
 
-- [Sheet Presentation](https://github.com/uckmhnds/Layouts/tree/SheetPresentation)
+- Sheet Presentation
     - <sub>UIViewController</sub>
     - <sub>UIAction</sub>
     - <sub>UISheetPresentationController</sub>
@@ -63,7 +63,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - <sub>UIGestureRecognizerDelegate</sub>
 
 
-- [Standard Table View](https://github.com/uckmhnds/Layouts/tree/StandardTableView)
+- Standard Table View
     - <sub>UIViewController</sub>
     - <sub>UIRefreshControl</sub>
     - <sub>UITableView</sub>
@@ -84,7 +84,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - <sub>UIAction</sub>
 
 
-- [UIControl](https://github.com/uckmhnds/Layouts/tree/UIControl)
+- UIControl
     - <sub>UIViewController</sub>
     - <sub>UILongPressGestureRecognizer</sub>
     - <sub>UIStackView</sub>
@@ -98,7 +98,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - <sub>UIImage</sub>
 
 
-- [ModalPresentation](https://github.com/uckmhnds/Layouts/tree/ModalPresentation)
+- Modal Presentation
     - <sub>UIViewController</sub>
     - <sub>UITapGestureRecognizer</sub>
     - <sub>UISwipeGestureRecognizer</sub>
@@ -125,7 +125,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - <sub>UICollectionViewDataSource</sub>
 
 
-- [Gestures](https://github.com/uckmhnds/Layouts/tree/Gestures)
+- Gestures
     - <sub>UIViewController</sub>
     - <sub>UIGestureRecognizerDelegate</sub>
     - <sub>UIGestureRecognizer</sub>
@@ -140,7 +140,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - <sub>UIStackView</sub>
 
 
-- [Drawer Menu](https://github.com/uckmhnds/Layouts/tree/DrawerMenu)
+- Drawer Menu
     - <sub>UIViewController</sub>
     - <sub>UINavigationController</sub>
     - <sub>UITapGestureRecognizer</sub>
@@ -149,5 +149,5 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - <sub>NSLayoutConstraint</sub>
 
 
-- [Navigation](https://github.com/uckmhnds/Layouts/tree/Navigation)
+- Navigation
 
