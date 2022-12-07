@@ -147,7 +147,16 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - <sub>UIPanGestureRecognizer</sub>
     - <sub>UIBarButtonItem</sub>
     - <sub>NSLayoutConstraint</sub>
+    - <sub>UIView.animate</sub>
 
 
 - Navigation
-
+    - <sub>UITabBarController</sub>
+    - <sub>UINavigationController</sub>
+    - <sub>UIViewController</sub>
+    - <sub>UITabBar</sub>
+    - <sub>UITabBarItem</sub>
+    - <sub>UIBarButtonItem</sub>
+    - <sub>UIView.animate</sub>
+    - <sub>UITableViewCell</sub>
+    - <sub>NSLayoutConstraint</sub>
