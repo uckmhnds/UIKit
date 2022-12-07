@@ -15,8 +15,10 @@
 		981D409F2937C62A00E2EE0A /* Sub1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D409E2937C62A00E2EE0A /* Sub1ViewController.swift */; };
 		981D40A12937C7F400E2EE0A /* GenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D40A02937C7F400E2EE0A /* GenericTableViewCell.swift */; };
 		981D40A32937DBA500E2EE0A /* Sub2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D40A22937DBA500E2EE0A /* Sub2ViewController.swift */; };
-		981D40A529390E3B00E2EE0A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D40A429390E3B00E2EE0A /* RootViewController.swift */; };
+		981D40A529390E3B00E2EE0A /* HomeTabNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D40A429390E3B00E2EE0A /* HomeTabNavigationController.swift */; };
 		981D40A7293927D200E2EE0A /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D40A6293927D200E2EE0A /* SideViewController.swift */; };
+		985E62342940DDA300CB09A0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985E62332940DDA300CB09A0 /* MainTabBarController.swift */; };
+		985E62362940DDD600CB09A0 /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985E62352940DDD600CB09A0 /* WorkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +32,10 @@
 		981D409E2937C62A00E2EE0A /* Sub1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sub1ViewController.swift; sourceTree = "<group>"; };
 		981D40A02937C7F400E2EE0A /* GenericTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
 		981D40A22937DBA500E2EE0A /* Sub2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sub2ViewController.swift; sourceTree = "<group>"; };
-		981D40A429390E3B00E2EE0A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		981D40A429390E3B00E2EE0A /* HomeTabNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabNavigationController.swift; sourceTree = "<group>"; };
 		981D40A6293927D200E2EE0A /* SideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
+		985E62332940DDA300CB09A0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		985E62352940DDD600CB09A0 /* WorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +68,10 @@
 		981D40852937C50900E2EE0A /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				981D40A02937C7F400E2EE0A /* GenericTableViewCell.swift */,
 				981D409A2937C5E900E2EE0A /* ViewControllers */,
 				981D40862937C50900E2EE0A /* AppDelegate.swift */,
 				981D40882937C50900E2EE0A /* SceneDelegate.swift */,
+				981D40A02937C7F400E2EE0A /* GenericTableViewCell.swift */,
 				981D408F2937C50A00E2EE0A /* Assets.xcassets */,
 				981D40912937C50A00E2EE0A /* LaunchScreen.storyboard */,
 				981D40942937C50A00E2EE0A /* Info.plist */,
@@ -78,21 +82,39 @@
 		981D409A2937C5E900E2EE0A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				981D40A429390E3B00E2EE0A /* RootViewController.swift */,
-				981D409D2937C60E00E2EE0A /* HomeToSub1ViewControllers */,
-				981D409B2937C60A00E2EE0A /* HomeViewController.swift */,
-				981D40A6293927D200E2EE0A /* SideViewController.swift */,
+				985E62332940DDA300CB09A0 /* MainTabBarController.swift */,
+				985E6243294107C000CB09A0 /* HomeTab */,
+				985E62452941088A00CB09A0 /* WorkTab */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		981D409D2937C60E00E2EE0A /* HomeToSub1ViewControllers */ = {
+		981D409D2937C60E00E2EE0A /* SubHomeViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				981D409E2937C62A00E2EE0A /* Sub1ViewController.swift */,
 				981D40A22937DBA500E2EE0A /* Sub2ViewController.swift */,
 			);
-			path = HomeToSub1ViewControllers;
+			path = SubHomeViewControllers;
+			sourceTree = "<group>";
+		};
+		985E6243294107C000CB09A0 /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				981D40A429390E3B00E2EE0A /* HomeTabNavigationController.swift */,
+				981D409B2937C60A00E2EE0A /* HomeViewController.swift */,
+				981D409D2937C60E00E2EE0A /* SubHomeViewControllers */,
+				981D40A6293927D200E2EE0A /* SideViewController.swift */,
+			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		985E62452941088A00CB09A0 /* WorkTab */ = {
+			isa = PBXGroup;
+			children = (
+				985E62352940DDD600CB09A0 /* WorkViewController.swift */,
+			);
+			path = WorkTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,11 +189,13 @@
 			files = (
 				981D40A32937DBA500E2EE0A /* Sub2ViewController.swift in Sources */,
 				981D409F2937C62A00E2EE0A /* Sub1ViewController.swift in Sources */,
-				981D40A529390E3B00E2EE0A /* RootViewController.swift in Sources */,
+				981D40A529390E3B00E2EE0A /* HomeTabNavigationController.swift in Sources */,
+				985E62362940DDD600CB09A0 /* WorkViewController.swift in Sources */,
 				981D40872937C50900E2EE0A /* AppDelegate.swift in Sources */,
 				981D40A12937C7F400E2EE0A /* GenericTableViewCell.swift in Sources */,
 				981D40892937C50900E2EE0A /* SceneDelegate.swift in Sources */,
 				981D409C2937C60A00E2EE0A /* HomeViewController.swift in Sources */,
+				985E62342940DDA300CB09A0 /* MainTabBarController.swift in Sources */,
 				981D40A7293927D200E2EE0A /* SideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
