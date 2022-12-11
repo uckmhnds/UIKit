@@ -5,7 +5,10 @@
 //  Created by Abdurrahman Gazi Yavuz on 8.10.2022.
 //
 
+#warning("Check combine")
+
 import UIKit
+import Combine
 
 enum Section{
     case firstSection
@@ -16,6 +19,8 @@ enum Section{
 }
 
 class ViewController: UIViewController {
+    
+    private let pagingInfoSubject = PassthroughSubject<PagingInfo, Never>()
     
     private let sections = [Section.firstSection,
                             Section.secondSection,
@@ -28,6 +33,10 @@ class ViewController: UIViewController {
     private func createCollectionView() -> UICollectionView {
         
         let layout      = self.createLayout()
+        
+        // Background decoration
+        layout.register(RoundedBackgroundView.self,
+                                  forDecorationViewOfKind: RoundedBackgroundView.reuseIdentifier)
         
         let view        = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
@@ -74,6 +83,8 @@ class ViewController: UIViewController {
                 
                 section.boundarySupplementaryItems      = [self.supplementaryHeaderItem(), self.supplementaryFooterItem()]
                 
+                section.decorationItems                 = [self.collectionLayoutBackgroundDecoration]
+                
                 return section
                 
             case .secondSection:
@@ -92,6 +103,8 @@ class ViewController: UIViewController {
                 section.contentInsets                   = .init(top: 30, leading: 0, bottom: 0, trailing: 0)
                 section.orthogonalScrollingBehavior     = .continuous
                 
+                section.decorationItems                 = [self.collectionLayoutBackgroundDecoration]
+                
                 return section
                 
             case .thirdSection:
@@ -109,6 +122,18 @@ class ViewController: UIViewController {
                 
                 section.contentInsets                   = .init(top: 30, leading: 0, bottom: 0, trailing: 0)
                 section.orthogonalScrollingBehavior     = .groupPaging
+
+                section.decorationItems                 = [self.collectionLayoutBackgroundDecoration]
+                
+                section.boundarySupplementaryItems      += [self.footerBoundarySupplementaryItem]
+
+                section.visibleItemsInvalidationHandler = { [weak self] (items, offset, env) -> Void in
+                    guard let self = self else { return }
+
+                    let page = round(offset.x / self.view.bounds.width)
+
+                    self.pagingInfoSubject.send(PagingInfo(sectionIndex: sectionIndex, currentPage: Int(page)))
+                }
                 
                 return section
                 
@@ -128,6 +153,8 @@ class ViewController: UIViewController {
                 
                 section.contentInsets                   = .init(top: 30, leading: 0, bottom: 0, trailing: 0)
                 
+                section.decorationItems                 = [self.collectionLayoutBackgroundDecoration]
+                
                 return section
                 
             case .fifthSection:
@@ -145,6 +172,8 @@ class ViewController: UIViewController {
                 let section     = NSCollectionLayoutSection(group: group)
                 
                 section.contentInsets                   = .init(top: 30, leading: 0, bottom: 0, trailing: 0)
+                
+                section.decorationItems                 = [self.collectionLayoutBackgroundDecoration]
                 
                 return section
             }
@@ -165,6 +194,24 @@ class ViewController: UIViewController {
               elementKind: Footer.identifier,
               alignment: .bottom)
     }
+    
+    private lazy var footerBoundarySupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem = {
+        
+        
+        
+        let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(20))
+
+        let item = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize,
+                                                                              elementKind: PagingSectionFooterView.identifier,
+                                                                              alignment: .bottom)
+        
+        return item
+    }()
+    
+    private lazy var collectionLayoutBackgroundDecoration: NSCollectionLayoutDecorationItem = {
+        let item = NSCollectionLayoutDecorationItem.background(elementKind: RoundedBackgroundView.reuseIdentifier)
+        return item
+    }()
 
 
     override func viewDidLoad() {
@@ -180,6 +227,7 @@ class ViewController: UIViewController {
         
         collectionView?.register(Header.self, forSupplementaryViewOfKind: Header.identifier, withReuseIdentifier: Header.identifier)
         collectionView?.register(Footer.self, forSupplementaryViewOfKind: Footer.identifier, withReuseIdentifier: Footer.identifier)
+        collectionView?.register(PagingSectionFooterView.self, forSupplementaryViewOfKind: PagingSectionFooterView.identifier, withReuseIdentifier: PagingSectionFooterView.identifier)
         
     }
     
@@ -270,6 +318,20 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             footer.backgroundColor  = .systemYellow
             
             return footer
+            
+        case PagingSectionFooterView.identifier:
+        
+            let pagingFooter = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                               withReuseIdentifier: PagingSectionFooterView.identifier,
+                                                                               for: indexPath) as! PagingSectionFooterView
+
+            let itemCount = 5
+            pagingFooter.configure(with: itemCount)
+
+            pagingFooter.subscribeTo(subject: pagingInfoSubject, for: indexPath.section)
+
+            return pagingFooter
+            
         default:
             return UICollectionReusableView()
         }
@@ -347,4 +409,102 @@ class Footer: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+struct PagingInfo: Equatable, Hashable {
+    let sectionIndex: Int
+    let currentPage: Int
+}
+
+class PagingSectionFooterView: UICollectionReusableView {
+    
+    static let identifier = "PagingSectionFooterView"
+    
+    private lazy var pageControl: UIPageControl = {
+        let control = UIPageControl()
+        control.translatesAutoresizingMaskIntoConstraints = false
+        control.isUserInteractionEnabled = true
+        control.currentPageIndicatorTintColor = .systemOrange
+        control.pageIndicatorTintColor = .systemGray2
+        return control
+    }()
+
+    private var pagingInfoToken: AnyCancellable?
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupView()
+    }
+
+    func configure(with numberOfPages: Int) {
+        pageControl.numberOfPages = numberOfPages
+    }
+
+    func subscribeTo(subject: PassthroughSubject<PagingInfo, Never>, for section: Int) {
+        pagingInfoToken = subject
+            .filter { $0.sectionIndex == section }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] pagingInfo in
+                self?.pageControl.currentPage = pagingInfo.currentPage
+            }
+    }
+
+    private func setupView() {
+        backgroundColor = .clear
+
+        addSubview(pageControl)
+
+        NSLayoutConstraint.activate([
+            pageControl.centerXAnchor.constraint(equalTo: centerXAnchor),
+            pageControl.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -10)
+        ])
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        pagingInfoToken?.cancel()
+        pagingInfoToken = nil
+    }
+}
+
+class RoundedBackgroundView: UICollectionReusableView {
+    
+    static let reuseIdentifier = "RoundedBackgroundView"
+    
+    private var insetView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .secondarySystemFill
+        view.layer.cornerRadius = 0
+        view.clipsToBounds = true
+        return view
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .clear
+        addSubview(insetView)
+
+        NSLayoutConstraint.activate([
+            insetView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            insetView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            insetView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            insetView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5)
+        ])
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
 }
