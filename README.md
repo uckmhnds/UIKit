@@ -11,6 +11,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
 - [Gestures](https://github.com/uckmhnds/Layouts/tree/Gestures)
 - [Drawer Menu](https://github.com/uckmhnds/Layouts/tree/DrawerMenu)
 - [Navigation](https://github.com/uckmhnds/Layouts/tree/Navigation)
+- [ExpandableView](https://github.com/uckmhnds/Layouts/tree/ExpandableView)
 
 ## Branches
 - Compositional Layout
@@ -160,3 +161,11 @@ This repo contains UIKit elements and layouts to be used in the future projects
     - <sub>UIView.animate</sub>
     - <sub>UITableViewCell</sub>
     - <sub>NSLayoutConstraint</sub>
+
+
+- ExpandableView
+    - <sub>UIViewController</sub>
+    - <sub>UITableView</sub>
+    - <sub>UITableViewCell</sub>
+    - <sub>UIStackView</sub>
+    - <sub>Closure</sub>
