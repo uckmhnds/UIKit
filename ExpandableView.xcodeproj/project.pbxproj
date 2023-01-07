@@ -13,6 +13,7 @@
 		98C63C532969ECBF00D7F32E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C63C512969ECBF00D7F32E /* Main.storyboard */; };
 		98C63C552969ECC000D7F32E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C63C542969ECC000D7F32E /* Assets.xcassets */; };
 		98C63C582969ECC000D7F32E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C63C562969ECC000D7F32E /* LaunchScreen.storyboard */; };
+		98C63C622969F63500D7F32E /* ExpandableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C63C612969F63500D7F32E /* ExpandableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		98C63C542969ECC000D7F32E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98C63C572969ECC000D7F32E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98C63C592969ECC000D7F32E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98C63C612969F63500D7F32E /* ExpandableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				98C63C4B2969ECBF00D7F32E /* AppDelegate.swift */,
 				98C63C4D2969ECBF00D7F32E /* SceneDelegate.swift */,
 				98C63C4F2969ECBF00D7F32E /* ViewController.swift */,
+				98C63C612969F63500D7F32E /* ExpandableCell.swift */,
 				98C63C512969ECBF00D7F32E /* Main.storyboard */,
 				98C63C542969ECC000D7F32E /* Assets.xcassets */,
 				98C63C562969ECC000D7F32E /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				98C63C502969ECBF00D7F32E /* ViewController.swift in Sources */,
 				98C63C4C2969ECBF00D7F32E /* AppDelegate.swift in Sources */,
 				98C63C4E2969ECBF00D7F32E /* SceneDelegate.swift in Sources */,
+				98C63C622969F63500D7F32E /* ExpandableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
