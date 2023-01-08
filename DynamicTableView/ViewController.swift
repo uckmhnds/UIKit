@@ -10,17 +10,18 @@ import UIKit
 enum SectionTypes { case sectionA, sectionB, sectionC }
 
 struct Section{
+    
     let type: SectionTypes
     var size: Int
+    var isOpened: Bool
+    var viewedSize: Int { return isOpened ? size + 1 : 1}
 }
 
 class ViewController: UIViewController {
     
-    var sections: [Section] = [Section(type: .sectionA, size: 1),
-                               Section(type: .sectionB, size: 10),
-                               Section(type: .sectionA, size: 1),
-                               Section(type: .sectionB, size: 12),
-                               Section(type: .sectionC, size: 12)]
+    var sections: [Section] = [Section(type: .sectionA, size: 8, isOpened: false),
+                               Section(type: .sectionB, size: 10, isOpened: false),
+                               Section(type: .sectionC, size: 12, isOpened: false)]
     
     
     private lazy var tableView: UITableView = {
@@ -30,6 +31,10 @@ class ViewController: UIViewController {
         view.register(CellA.self, forCellReuseIdentifier: CellA.identifier)
         view.register(CellB.self, forCellReuseIdentifier: CellB.identifier)
         view.register(CellC.self, forCellReuseIdentifier: CellC.identifier)
+        
+        view.register(CellAA.self, forCellReuseIdentifier: CellAA.identifier)
+        view.register(CellBB.self, forCellReuseIdentifier: CellBB.identifier)
+        view.register(CellCC.self, forCellReuseIdentifier: CellCC.identifier)
         
         view.delegate = self
         view.dataSource = self
@@ -42,7 +47,7 @@ class ViewController: UIViewController {
     }
     
     func getSectionSize(forSection: Int) -> Int {
-        return sections[forSection].size
+        return sections[forSection].viewedSize
     }
 
     override func viewDidLoad() {
@@ -70,16 +75,31 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         switch getSectionType(forSection: indexPath.section) {
             
         case .sectionA:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellA.identifier, for: indexPath) as? CellA else {return UITableViewCell()}
-            return cell
+            if indexPath.row == 0{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: CellA.identifier, for: indexPath) as? CellA else {return UITableViewCell()}
+                return cell
+            }else{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: CellAA.identifier, for: indexPath) as? CellAA else {return UITableViewCell()}
+                return cell
+            }
             
         case .sectionB:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellB.identifier, for: indexPath) as? CellB else {return UITableViewCell()}
-            return cell
+            if indexPath.row == 0{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: CellB.identifier, for: indexPath) as? CellB else {return UITableViewCell()}
+                return cell
+            }else{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: CellBB.identifier, for: indexPath) as? CellBB else {return UITableViewCell()}
+                return cell
+            }
             
         case .sectionC:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellC.identifier, for: indexPath) as? CellC else {return UITableViewCell()}
-            return cell
+            if indexPath.row == 0{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: CellC.identifier, for: indexPath) as? CellC else {return UITableViewCell()}
+                return cell
+            }else{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: CellCC.identifier, for: indexPath) as? CellCC else {return UITableViewCell()}
+                return cell
+            }
             
         }
     }
@@ -92,13 +112,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if indexPath.row == 0{
-//            sections.remove(at: 1)
-//            tableView.reloadData()
+        if indexPath.row == 0 {
+            
+            sections[indexPath.section].isOpened.toggle()
+            
+            tableView.reloadSections([indexPath.section], with: .none)
+        }else{
+            
         }
         
     }
-    
     
 }
 
@@ -109,6 +132,21 @@ class CellA: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .red
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+}
+
+class CellAA: UITableViewCell {
+    
+    static let identifier: String = "CellAA"
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .systemRed
     }
     
     required init?(coder: NSCoder) {
@@ -132,6 +170,21 @@ class CellB: UITableViewCell {
     
 }
 
+class CellBB: UITableViewCell {
+    
+    static let identifier: String = "CellBB"
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .systemYellow
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+}
+
 class CellC: UITableViewCell {
     
     static let identifier: String = "CellC"
@@ -139,6 +192,21 @@ class CellC: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .blue
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+}
+
+class CellCC: UITableViewCell {
+    
+    static let identifier: String = "CellCC"
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .systemBlue
     }
     
     required init?(coder: NSCoder) {
