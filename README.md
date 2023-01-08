@@ -12,6 +12,7 @@ This repo contains UIKit elements and layouts to be used in the future projects
 - [Drawer Menu](https://github.com/uckmhnds/Layouts/tree/DrawerMenu)
 - [Navigation](https://github.com/uckmhnds/Layouts/tree/Navigation)
 - [ExpandableView](https://github.com/uckmhnds/Layouts/tree/ExpandableView)
+- [DynamicTable](https://github.com/uckmhnds/Layouts/tree/DynamicTable)
 
 ## Branches
 - Compositional Layout
